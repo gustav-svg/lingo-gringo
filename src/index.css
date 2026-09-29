@@ -1,0 +1,29 @@
+:root { --bg:#13212b; --panel:#1c303d; --ink:#eef1e6; --dim:#93a8b3; --gold:#f2b544; font-family:system-ui,sans-serif; color:var(--ink); background:var(--bg); }
+* { box-sizing:border-box }
+body { margin:0 }
+button,select,input,textarea { font:inherit; color:inherit; background:var(--panel); border:1px solid #2f4757; border-radius:6px; padding:.4rem .7rem }
+button { cursor:pointer } button:hover,button.on { border-color:var(--gold) }
+.app { max-width:900px; margin:0 auto; padding:1rem }
+nav { display:flex; gap:.5rem; align-items:center; margin-bottom:1rem }
+nav h1 { font:italic 700 1.6rem Georgia,serif; margin:0 auto 0 0; color:var(--gold) }
+textarea { width:100%; min-height:5rem; margin:.5rem 0 }
+.row { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; margin:.6rem 0 }
+.stage { background:#000; border-radius:8px; overflow:hidden; display:flex; flex-direction:column }
+.stage:fullscreen { justify-content:center }
+video { width:100%; max-height:60vh }
+.subs { padding:.8rem; text-align:center; min-height:5rem; background:#0b141a }
+.es { font:1.5rem Georgia,serif } .en { font-size:.95rem; color:var(--dim); margin-top:.3rem }
+.w { cursor:pointer; border-radius:3px } .w:hover { background:#f2b54433 }
+.fade { display:inline-block; animation:f .25s ease }
+@keyframes f { from { opacity:0; transform:translateY(3px) } }
+.sel { background:var(--panel); border-left:3px solid var(--gold); padding:.7rem; margin:.6rem 0 }
+.transcript { max-height:50vh; overflow:auto; font:1.15rem/1.7 Georgia,serif }
+.transcript p { margin:.2rem 0; padding:.2rem .5rem; border-radius:6px } .transcript .on { background:var(--panel) }
+.transcript button { padding:0 .4rem; margin-right:.5rem }
+.insp { position:fixed; right:0; top:0; bottom:0; width:min(380px,100%); background:var(--panel); padding:1.2rem; overflow:auto; box-shadow:-8px 0 30px #0008; animation:s .25s ease }
+@keyframes s { from { transform:translateX(100%) } }
+.insp img { width:100%; border-radius:8px; margin:.6rem 0 } .insp input { display:block; width:100%; margin:.4rem 0 }
+.x { float:right } .big { font-size:1.4rem; color:var(--gold) }
+.list { list-style:none; padding:0 } .list li { padding:.5rem; border-bottom:1px solid #2f4757; cursor:pointer } .list b { margin-right:.8rem; font:1.1rem Georgia,serif }
+.quiz { text-align:center } .quiz h2 { font:2.4rem Georgia,serif }
+@media (prefers-reduced-motion:reduce) { .fade,.insp { animation:none } }
